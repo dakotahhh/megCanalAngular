@@ -1,0 +1,58 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+#header{
+	position: relative;
+	vertical-align: bottom;
+}
+
+#nav{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+#nav li{
+	display: inline;
+	list-style-type: none;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+a{
+	text-decoration: none;
+	color: #000000;
+}
+
+.imagegrid{
+	display: inline-block;
+	text-align: center;
+}
+
+.food{
+	height: 300px;
+	width: 300px;
+	float: left;
+	padding: 10px;
+}
+
+.meg{
+	height:390px; 
+	width:380px;
+}
+
+.socialmedia{
+	height: 128px;
+	width: 128px;
+	vertical-align: middle;
+}
+
+.pacifico{
+	font-family: 'Pacifico', cursive;
+}
+
+.arimo{
+	font-family: 'Arimo', sans-serif;
+}

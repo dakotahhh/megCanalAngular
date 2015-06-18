@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="megCanal">
+	<head>
+		<meta charset="UTF-8">
+		<title>Meg Canal</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script src="scripts/site.js"></script>
+		<script src="scripts/imageController.js"></script>
+		<script src="scripts/jquery-1.11.1.min.js"></script>
+		<script src="scripts/angular-route.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Arimo" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/site.css" />
+	</head>
+	<body>
+		<div>
+
+			<div class="pacifico" id="header">
+				<h1><a href="#/home">Meg Canal</a></h1>
+				<div id="nav">
+					<ul>
+						<li><a href="#/cakesandcookies">Cakes and Cookies</a></li>
+						<li><a href="#/bread">Bread</a></li>
+						<li><a href="#/andmore">And More</a></li>
+						<li><a href="#/contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="mainBody" ng-controller="imageCtrl">
+
+				<ng-view>Loading...</ng-view>
+
+				<script type="text/ng-template" id="home.html">
+					<h2 class="arimo">Vegan Baker from Parish, Florida</h2>
+					<img class="meg" src="images/hashtagmegsquat.png" />
+					<p class="arimo">I love JOJO.</p>
+				</script>
+
+				<script type="text/ng-template" id="cakesandcookies.html">
+					<div class="imagegrid" ng-repeat="image in cakesAndCookiesImages">
+						<figure>
+							<img class="food" ng-src="images/cakesandcookies/{{image.source}}"/>
+						</figure>
+						<figcaption class="arimo">{{image.description}}</figcaption>
+					</div>
+				</script>
+
+				<script type="text/ng-template" id="bread.html">
+					<div class="imagegrid" ng-repeat="image in breadImages">
+						<figure>
+							<img class="food" ng-src="images/bread/{{image.source}}"/>
+						</figure>
+						<figcaption class="arimo">{{image.description}}</figcaption>
+					</div>
+				</script>
+
+				<script type="text/ng-template" id="andmore.html">
+					<div class="imagegrid" ng-repeat="image in andMoreImages">
+						<figure>
+							<img class="food" ng-src="images/andmore/{{image.source}}"/>
+						</figure>
+						<figcaption class="arimo">{{image.description}}</figcaption>
+					</div>
+				</script>
+
+				<script type="text/ng-template" id="contact.html">
+					<h2 class="arimo">You can contact me on: </h2>
+					<div class="mediadiv">
+					<img class="socialmedia" src="images/socialmedia/twitter.png" alt="twitter"/><span class="pacifico">@megcanal</span>
+					</div>
+					<div class="mediadiv">
+					<img class="socialmedia" src="images/socialmedia/gmail128.png" alt="gmail"/><span class="pacifico">megcanal@gmail.com</span>
+					</div>
+				</script>
+
+			</div>
+
+		</div>
+	</body>
+</html>
